@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edizione Sordello TEI - Didattica</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;700&family=Source+Serif+4:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1 id="main-title">Edizione Digitale TEI</h1>
+        <nav class="main-nav">
+            <button onclick="showSection('intro')">Introduzione</button>
+            <button onclick="showSection('testimoni')">Testimoni</button>
+            <button onclick="showSection('edizione')">Testo Critico</button>
+        </nav>
+    </header>
+
+    <main id="content">
+        <!-- Sezione Introduzione -->
+        <section id="intro">
+            <h2>Introduzione</h2>
+            <div id="intro-text" class="text-box"></div>
+        </section>
+
+        <!-- Sezione Testimoni -->
+        <section id="testimoni" style="display:none;">
+            <h2>Elenco dei Testimoni</h2>
+            <div class="text-box">
+                <ul id="witness-list"></ul>
+            </div>
+        </section>
+
+        <!-- Sezione Testo Critico (Layout Affiancato) -->
+        <section id="edizione" style="display:none;">
+            <div class="edition-header">
+                <h2>Testo Critico</h2>
+            </div>
+
+            <div class="split-container">
+                <!-- Pannello Sinistro: Testo -->
+                <div class="panel left-panel">
+                    <div id="text-container" class="text-box"></div>
+                </div>
+
+                <!-- Pannello Destro: Funzioni Affiancate -->
+                <div class="panel right-panel">
+                    <div class="panel-nav">
+                        <button id="btn-translation" class="nav-side-btn active" onclick="setSideView('translation')">Traduzione</button>
+                        <button id="btn-apparatus" class="nav-side-btn" onclick="setSideView('apparatus')">Apparato</button>
+                        <button id="btn-facsimile" class="nav-side-btn" onclick="setSideView('facsimile')">Facsimile</button>
+                    </div>
+                    
+                    <!-- Contenitore dinamico -->
+                    <div class="side-wrapper">
+                        <!-- I filtri appaiono solo quando l'apparato è attivo -->
+                        <div id="apparatus-controls" class="side-controls" style="display:none;">
+                            <div class="control-group">
+                                <label>Varianti:</label>
+                                <select id="filterType" onchange="renderText()">
+                                    <option value="all">Tutte</option>
+                                    <option value="sostanziale">Sostanziali</option>
+                                    <option value="ortografica">Ortografiche</option>
+                                </select>
+                            </div>
+                            <div class="control-group">
+                                <label>Testimone:</label>
+                                <select id="filterWitness" onchange="renderText()">
+                                    <!-- Popolato da JS -->
+                                </select>
+                            </div>
+                        </div>
+
+                        <div id="side-content" class="text-box">
+                            <div id="side-placeholder">Seleziona una visualizzazione affiancata</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

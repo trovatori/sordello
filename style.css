@@ -1,0 +1,195 @@
+/* Reset e Base */
+:root {
+    --primary: #8b0000;
+    --primary-light: #fdf2f2;
+    --bg: #fdfbf7;
+    --text: #2c3e50;
+    --border: #e0dcd0;
+    --white: #ffffff;
+}
+
+body { 
+    font-family: 'Source Sans 3', sans-serif; 
+    line-height: 1.7; 
+    color: var(--text); 
+    max-width: 1200px; 
+    margin: auto; 
+    padding: 20px; 
+    background: var(--bg); 
+}
+
+/* Navigazione Principale */
+header { 
+    text-align: center; 
+    margin-bottom: 40px; 
+}
+
+header h1 {
+    font-weight: 700;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--primary);
+    margin-bottom: 20px;
+}
+
+.main-nav {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.main-nav button {
+    background: none;
+    border: none;
+    font-family: 'Source Sans 3', sans-serif;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    color: #7f8c8d;
+    cursor: pointer;
+    padding: 10px 0;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.main-nav button:hover {
+    color: var(--primary);
+}
+
+.main-nav button.active {
+    color: var(--primary);
+    border-bottom: 2px solid var(--primary);
+}
+
+/* Split Layout */
+.split-container {
+    display: flex;
+    gap: 40px;
+    height: 75vh;
+    margin-top: 20px;
+}
+
+.panel {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Pulsanti Pannello Laterale (come da screenshot ma migliorati) */
+.panel-nav {
+    display: flex;
+    background: #eee;
+    padding: 4px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    gap: 4px;
+}
+
+.nav-side-btn {
+    flex: 1;
+    font-family: 'Source Sans 3', sans-serif;
+    font-weight: 600;
+    font-size: 0.85rem;
+    border: none;
+    padding: 8px 12px;
+    background: transparent;
+    color: #666;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+
+.nav-side-btn:hover {
+    background: rgba(255,255,255,0.5);
+}
+
+.nav-side-btn.active {
+    background: var(--white);
+    color: var(--primary);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+/* Text Boxes */
+.text-box { 
+    font-family: 'Source Serif 4', serif; 
+    font-size: 1.2rem; 
+    background: var(--white); 
+    padding: 40px; 
+    border: 1px solid var(--border); 
+    border-radius: 8px; 
+    overflow-y: auto;
+    height: 100%;
+}
+
+.line {
+    display: flex;
+    margin-bottom: 8px;
+}
+
+.line strong {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.8rem;
+    color: #999;
+    width: 30px;
+    text-align: right;
+    margin-right: 20px;
+    font-weight: 400;
+}
+
+/* Varianti nel testo */
+.variant { 
+    background-color: var(--primary-light);
+    border-bottom: 1px solid var(--primary);
+    color: var(--primary);
+    cursor: help;
+    transition: background 0.2s;
+    padding: 0 2px;
+}
+
+.variant:hover {
+    background-color: #fde4e4;
+}
+
+/* Controlli Apparato */
+.side-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 15px;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    margin-bottom: 15px;
+    font-size: 0.85rem;
+}
+
+.control-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+select {
+    font-family: 'Source Sans 3', sans-serif;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 4px 8px;
+    background: var(--bg);
+}
+
+/* Apparato List */
+.app-list-item {
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px dotted var(--border);
+    line-height: 1.4;
+}
+
+.app-list-item strong { color: var(--primary); }
+
+/* Image and Utility */
+#facs-img-side { width: 100%; border-radius: 4px; cursor: zoom-in; }
+.zoom { transform: scale(2.5); cursor: zoom-out; }
+h3 { font-size: 1rem; text-transform: uppercase; margin-bottom: 15px; color: #7f8c8d; }

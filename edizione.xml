@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+      <title>Planher vuelh</title>
+      <author>Sordello di Goito</author>
+      </titleStmt>
+      <sourceDesc>
+        <listWit>
+          <witness xml:id="A">Città del Vaticano, Biblioteca Apostolica Vaticana, Vat. Lat. 5232.</witness>
+          <witness xml:id="H">Città del Vaticano, Biblioteca Apostolica Vaticana, Vat. Lat. 3207.</witness>
+          <witness xml:id="R">Paris, Bibliothèque nationale de France, fr. 22543.</witness>
+        </listWit>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  
+  <facsimile>
+    <surface xml:id="f. 126r">
+      <graphic url="Images/A.jpg " width="1000px" height="1500px"/>
+     </surface>
+  </facsimile>
+
+  <text>
+    <body>
+      <div type="intro">
+        <p>Benvenuti nell'edizione digitale del planh composto da Sordello in morte di Blacatz tra la fine del 1236 e i primi mesi del 1237.</p>
+      </div>
+      <div type="translation">
+        <p>Voglio piangere il signor Blacatz su questa semplice melodia, con il cuore triste e affranto, e ne ho ben ragione, perché in lui ho perso un [buon] signore e un buon amico, e poiché tutte le nobili qualità sono scomparse con la sua morte, il danno è tanto mortale che io non ho speranza che si possa mai riparare, se non in questa maniera: che gli si asporti il cuore e che ne mangino i baroni che vivono privi di coraggio, poiché del cuore [di Blacatz] avranno beneficio.</p>
+      </div>
+      <div type="edition">
+            <lg type="stanza">
+            <l n="1">Planher <app>
+                  <lem>vuelh</lem>
+                      <rdg type="orthographic" wit="#A">voilh</rdg></app>
+                        en Blacatz en aquest leugier so,</l>
+            <l n="2">ab cor trist e marrit; et ai en be razo,</l>
+            <l n="3">qu’en luy ai mescabat senhor et amic bo,</l>
+            <l n="4">e quar tug l’ayp valent en sa mort perdut so</l>
+            <l n="5">tant es mortals lo dans qu’ieu non ai sospeisso</l>
+            <l n="6">que jamais si revenha, s’en aital guiza no;</l>
+            <l n="7">qu’om li traga lo cor e que·n manio·l baro</l>
+            <l n="8">que vivon descorat, pueys auran de cor pro.</l>
+          </lg>
+        </div>
+    </body>
+  </text>
+</TEI>
